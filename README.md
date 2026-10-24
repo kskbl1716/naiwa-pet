@@ -1,4 +1,4 @@
-# 奶小蛙 · macOS 升级版
+# naiwa-pet · 奶小蛙 macOS 升级版
 
 > 基于原作者 [jiasjdia/naiwa](https://github.com/jiasjdia/naiwa) 的 Windows 桌宠源码，移植到 Apple Silicon macOS 原生运行，**并在原版基础上新增了形态、素材、语音和动作**。不需要 Wine，也不需要虚拟机。是我身为奶家人对奶娃及其衍生异形形象的喜爱让我改进了以下这个好玩的小软件，方便的话，顺手给个star呗【笑】
 ![六种形态](docs/forms.png)
@@ -59,8 +59,8 @@
 ## 从源码运行
 
 ```bash
-git clone https://github.com/kskbl1716/naiwa-macos.git
-cd naiwa-macos
+git clone https://github.com/kskbl1716/naiwa-pet.git
+cd naiwa-pet
 
 python3.12 -m venv .venv
 source .venv/bin/activate
