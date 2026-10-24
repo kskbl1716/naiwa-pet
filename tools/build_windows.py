@@ -72,6 +72,12 @@ def write_spec(files, spec_path):
 
 
 def main():
+    # Windows consoles default to cp1252 and crash on the Chinese output names.
+    for stream in (sys.stdout, sys.stderr):
+        try:
+            stream.reconfigure(encoding="utf-8", errors="replace")
+        except (AttributeError, ValueError):
+            pass
     if sys.platform != "win32":
         raise SystemExit("Build the Windows exe on Windows (or the windows-latest runner).")
     for package in ("PIL", "pygame", "psutil", "pymunk", "PyInstaller"):
@@ -121,7 +127,7 @@ def main():
     with zipfile.ZipFile(archive, "w", zipfile.ZIP_DEFLATED, compresslevel=9) as bundle:
         for item in (target, readme, ROOT / "dist/SHA256.txt"):
             bundle.write(item, item.name)
-    print(f"built: {archive}  ({archive.stat().st_size / 1024 / 1024:.1f} MB)")
+    print(f"built: {archive.name}  ({archive.stat().st_size / 1024 / 1024:.1f} MB)")
     print(f"sha256: {digest}")
 
 
