@@ -1,0 +1,107 @@
+{
+  "volume": 0.7,
+  "outputLatencyMs": 170,
+  "clips": {
+    "laugh": {
+      "label": "捧腹大笑",
+      "media": "media/laugh.wav",
+      "startOffsetMs": 0
+    },
+    "voice_03_A_01": {
+      "label": "嘎嘎滴辣虾（奶蛙）",
+      "media": "assets/voices/voice_03_A_01.wav",
+      "startOffsetMs": 0
+    },
+    "voice_03_A_02": {
+      "label": "安迪（奶蛙）",
+      "media": "assets/voices/voice_03_A_02.wav",
+      "startOffsetMs": 0
+    },
+    "voice_03_A_05": {
+      "label": "全班大笑",
+      "media": "assets/voices/voice_03_A_05.wav",
+      "startOffsetMs": 0
+    },
+    "voice_03_B_01": {
+      "label": "嘎嘎滴辣虾（群声）",
+      "media": "assets/voices/voice_03_B_01.wav",
+      "startOffsetMs": 0
+    },
+    "voice_03_B_02": {
+      "label": "安迪（群声）",
+      "media": "assets/voices/voice_03_B_02.wav",
+      "startOffsetMs": 0
+    },
+    "f_egg_01": {
+      "label": "奶蛋·01（+3半音）",
+      "media": "assets/voices/f_egg_01.wav",
+      "startOffsetMs": 0
+    },
+    "f_egg_02": {
+      "label": "奶蛋·02（+3半音）",
+      "media": "assets/voices/f_egg_02.wav",
+      "startOffsetMs": 0
+    },
+    "f_dog_01": {
+      "label": "奶狗·01（+1半音）",
+      "media": "assets/voices/f_dog_01.wav",
+      "startOffsetMs": 0
+    },
+    "f_dog_02": {
+      "label": "奶狗·02（+1半音）",
+      "media": "assets/voices/f_dog_02.wav",
+      "startOffsetMs": 0
+    },
+    "name_dog": {
+      "label": "奶狗·称呼",
+      "media": "assets/voices/name_dog.wav",
+      "startOffsetMs": 0
+    },
+    "f_cup_01": {
+      "label": "奶杯·01（-2半音）",
+      "media": "assets/voices/f_cup_01.wav",
+      "startOffsetMs": 0
+    },
+    "f_cup_02": {
+      "label": "奶杯·02（-2半音）",
+      "media": "assets/voices/f_cup_02.wav",
+      "startOffsetMs": 0
+    },
+    "f_bean_01": {
+      "label": "奶豆·01（+5半音）",
+      "media": "assets/voices/f_bean_01.wav",
+      "startOffsetMs": 0
+    },
+    "f_bean_02": {
+      "label": "奶豆·02（+5半音）",
+      "media": "assets/voices/f_bean_02.wav",
+      "startOffsetMs": 0
+    },
+    "name_bean": {
+      "label": "奶豆·称呼",
+      "media": "assets/voices/name_bean.wav",
+      "startOffsetMs": 0
+    },
+    "f_mouse_01": {
+      "label": "奶鼠·01（+7半音）",
+      "media": "assets/voices/f_mouse_01.wav",
+      "startOffsetMs": 0
+    },
+    "f_mouse_02": {
+      "label": "奶鼠·02（+7半音）",
+      "media": "assets/voices/f_mouse_02.wav",
+      "startOffsetMs": 0
+    },
+    "name_mouse": {
+      "label": "奶鼠·称呼",
+      "media": "assets/voices/name_mouse.wav",
+      "startOffsetMs": 0
+    },
+    "laugh_chorus": {
+      "label": "群笑（原版同一段错开三重）",
+      "media": "media/laugh_chorus.wav",
+      "startOffsetMs": 0,
+      "gain": 1.15
+    }
+  }
+}

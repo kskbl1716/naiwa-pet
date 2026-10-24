@@ -1,0 +1,149 @@
+{
+  "version": 1,
+  "groups": {
+    "naiwa": [
+      "voice_03_A_01",
+      "voice_03_A_02",
+      "voice_03_A_05"
+    ],
+    "sharp": [
+      "voice_03_B_01",
+      "voice_03_B_02"
+    ],
+    "egg": [
+      "f_egg_01",
+      "f_egg_02"
+    ],
+    "dog": [
+      "name_dog",
+      "f_dog_01",
+      "f_dog_02"
+    ],
+    "cup": [
+      "f_cup_01",
+      "f_cup_02"
+    ],
+    "bean": [
+      "name_bean",
+      "f_bean_01",
+      "f_bean_02"
+    ],
+    "mouse": [
+      "name_mouse",
+      "f_mouse_01",
+      "f_mouse_02"
+    ]
+  },
+  "labels": {
+    "voice_03_A_01": "嘎嘎滴辣虾（奶蛙）",
+    "voice_03_A_02": "安迪（奶蛙）",
+    "voice_03_A_05": "全班大笑",
+    "voice_03_B_01": "嘎嘎滴辣虾（群声）",
+    "voice_03_B_02": "安迪（群声）",
+    "f_egg_01": "奶蛋·01（+3半音）",
+    "f_egg_02": "奶蛋·02（+3半音）",
+    "f_dog_01": "奶狗·01（+1半音）",
+    "f_dog_02": "奶狗·02（+1半音）",
+    "name_dog": "奶狗·称呼",
+    "f_cup_01": "奶杯·01（-2半音）",
+    "f_cup_02": "奶杯·02（-2半音）",
+    "f_bean_01": "奶豆·01（+5半音）",
+    "f_bean_02": "奶豆·02（+5半音）",
+    "name_bean": "奶豆·称呼",
+    "f_mouse_01": "奶鼠·01（+7半音）",
+    "f_mouse_02": "奶鼠·02（+7半音）",
+    "name_mouse": "奶鼠·称呼"
+  },
+  "clips": {
+    "voice_03_A_01": {
+      "media": "assets/voices/voice_03_A_01.wav",
+      "startOffsetMs": 0,
+      "dur": 1.26
+    },
+    "voice_03_A_02": {
+      "media": "assets/voices/voice_03_A_02.wav",
+      "startOffsetMs": 0,
+      "dur": 1.25
+    },
+    "voice_03_A_05": {
+      "media": "assets/voices/voice_03_A_05.wav",
+      "startOffsetMs": 0,
+      "dur": 2.96
+    },
+    "voice_03_B_01": {
+      "media": "assets/voices/voice_03_B_01.wav",
+      "startOffsetMs": 0,
+      "dur": 1.15
+    },
+    "voice_03_B_02": {
+      "media": "assets/voices/voice_03_B_02.wav",
+      "startOffsetMs": 0,
+      "dur": 1.15
+    },
+    "f_egg_01": {
+      "file": "f_egg_01.wav",
+      "group": "egg",
+      "source": "voice_03_B_01"
+    },
+    "f_egg_02": {
+      "file": "f_egg_02.wav",
+      "group": "egg",
+      "source": "voice_03_B_02"
+    },
+    "f_dog_01": {
+      "file": "f_dog_01.wav",
+      "group": "dog",
+      "source": "voice_03_B_01"
+    },
+    "f_dog_02": {
+      "file": "f_dog_02.wav",
+      "group": "dog",
+      "source": "voice_03_B_02"
+    },
+    "name_dog": {
+      "file": "name_dog.wav",
+      "group": "dog",
+      "source": "name"
+    },
+    "f_cup_01": {
+      "file": "f_cup_01.wav",
+      "group": "cup",
+      "source": "voice_03_B_01"
+    },
+    "f_cup_02": {
+      "file": "f_cup_02.wav",
+      "group": "cup",
+      "source": "voice_03_B_02"
+    },
+    "f_bean_01": {
+      "file": "f_bean_01.wav",
+      "group": "bean",
+      "source": "voice_03_B_01"
+    },
+    "f_bean_02": {
+      "file": "f_bean_02.wav",
+      "group": "bean",
+      "source": "voice_03_B_02"
+    },
+    "name_bean": {
+      "file": "name_bean.wav",
+      "group": "bean",
+      "source": "name"
+    },
+    "f_mouse_01": {
+      "file": "f_mouse_01.wav",
+      "group": "mouse",
+      "source": "voice_03_B_01"
+    },
+    "f_mouse_02": {
+      "file": "f_mouse_02.wav",
+      "group": "mouse",
+      "source": "voice_03_B_02"
+    },
+    "name_mouse": {
+      "file": "name_mouse.wav",
+      "group": "mouse",
+      "source": "name"
+    }
+  }
+}

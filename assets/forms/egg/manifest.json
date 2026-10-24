@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "generatedAt": "2026-10-24",
+  "generator": "naiwa mac forms builder",
+  "fps": 15,
+  "canvas": {
+    "w": 720,
+    "h": 686
+  },
+  "globalScale": 0.7,
+  "idleClip": "idle",
+  "idleFrame": 1,
+  "idleAnimated": true,
+  "clips": [
+    {
+      "id": "idle",
+      "label": "待机",
+      "frames": 20,
+      "dir": "forms/egg/idle",
+      "window": {
+        "store": {
+          "w": 320,
+          "h": 305
+        }
+      }
+    },
+    {
+      "id": "laugh",
+      "label": "大笑（沙滩原片 奶蛋）",
+      "frames": 23,
+      "dir": "forms/egg/laugh",
+      "window": {
+        "store": {
+          "w": 320,
+          "h": 305
+        }
+      },
+      "source": "BV1kdbQ6oEmK 1.4-3.9s 逐帧抠像"
+    },
+    {
+      "id": "hop",
+      "label": "蹦跳",
+      "frames": 20,
+      "dir": "forms/egg/hop",
+      "window": {
+        "store": {
+          "w": 320,
+          "h": 305
+        }
+      }
+    }
+  ],
+  "source": "bilibili BV1F7aP6FEEB 奶史_ 选择奶蛋还是奶鼠 // 1.1-3.6s 博物馆走廊 逐帧抠像",
+  "laughReal": true
+}

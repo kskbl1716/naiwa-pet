@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "generatedAt": "2026-10-24",
+  "generator": "naiwa mac forms builder",
+  "fps": 15,
+  "canvas": {
+    "w": 720,
+    "h": 686
+  },
+  "globalScale": 0.7,
+  "idleClip": "idle",
+  "idleFrame": 1,
+  "idleAnimated": true,
+  "clips": [
+    {
+      "id": "idle",
+      "label": "待机",
+      "frames": 20,
+      "dir": "forms/bean/idle",
+      "window": {
+        "store": {
+          "w": 320,
+          "h": 305
+        }
+      }
+    },
+    {
+      "id": "laugh",
+      "label": "大笑",
+      "frames": 20,
+      "dir": "forms/bean/laugh",
+      "window": {
+        "store": {
+          "w": 320,
+          "h": 305
+        }
+      }
+    },
+    {
+      "id": "hop",
+      "label": "蹦跳",
+      "frames": 20,
+      "dir": "forms/bean/hop",
+      "window": {
+        "store": {
+          "w": 320,
+          "h": 305
+        }
+      }
+    }
+  ],
+  "source": "bilibili BV15xJ266Ecv 奶史_ 选择奶豆还是奶狗 // 104.8s 手捧奶豆 逐帧抠像",
+  "laughReal": false
+}

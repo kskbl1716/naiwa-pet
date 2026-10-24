@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "generatedAt": "2026-10-24",
+  "generator": "naiwa mac forms builder",
+  "fps": 15,
+  "canvas": {
+    "w": 720,
+    "h": 686
+  },
+  "globalScale": 0.7,
+  "idleClip": "idle",
+  "idleFrame": 1,
+  "idleAnimated": true,
+  "clips": [
+    {
+      "id": "idle",
+      "label": "待机",
+      "frames": 58,
+      "dir": "forms/mouse/idle",
+      "window": {
+        "store": {
+          "w": 320,
+          "h": 305
+        }
+      }
+    },
+    {
+      "id": "laugh",
+      "label": "大笑（奶蛋笑脸移植）",
+      "frames": 24,
+      "dir": "forms/mouse/laugh",
+      "window": {
+        "store": {
+          "w": 320,
+          "h": 305
+        }
+      },
+      "source": "face transplant from egg beach laugh frames"
+    },
+    {
+      "id": "wave",
+      "label": "招手",
+      "frames": 14,
+      "dir": "forms/mouse/wave",
+      "window": {
+        "store": {
+          "w": 320,
+          "h": 305
+        }
+      }
+    }
+  ],
+  "source": "bilibili BV1F7aP6FEEB 奶史_ 选择奶蛋还是奶鼠 // 1.0-3.6s 逐帧抠像",
+  "laughReal": true
+}

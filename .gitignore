@@ -1,0 +1,22 @@
+__pycache__/
+*.py[cod]
+.venv/
+.build-venv/
+.cache/
+_preview/
+build/
+dist/
+releases/
+*.spec
+*.log
+*.err
+reports/
+
+# 备份与本地运行数据
+_backup/
+assets/forms/_backup/
+assets/forms/*/_*/
+assets/voices/_removed/
+pet_settings.json
+.DS_Store
+*.sock

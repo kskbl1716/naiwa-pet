@@ -1,0 +1,28 @@
+{
+  "clips": [
+    {
+      "id": "jump",
+      "label": "蹦一下",
+      "frames": 28,
+      "dir": "forms/naiwa/jump",
+      "window": {
+        "store": {
+          "w": 320,
+          "h": 305
+        }
+      }
+    },
+    {
+      "id": "tilt",
+      "label": "歪个头",
+      "frames": 24,
+      "dir": "forms/naiwa/tilt",
+      "window": {
+        "store": {
+          "w": 320,
+          "h": 305
+        }
+      }
+    }
+  ]
+}
