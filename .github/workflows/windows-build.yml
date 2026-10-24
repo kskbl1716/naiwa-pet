@@ -1,0 +1,44 @@
+name: Windows build
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: read
+
+jobs:
+  windows:
+    name: Build Windows exe
+    runs-on: windows-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          architecture: x64
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt pyinstaller
+
+      - name: Select the Windows runtime
+        run: copy pet_runtime_win32.py pet_runtime.py
+
+      - name: Import check
+        run: python -c "import tkinter, pet_app; print('imports ok')"
+
+      - name: Build
+        run: python tools/build_windows.py
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: naiwa-windows
+          path: dist/*.zip
+          if-no-files-found: error
