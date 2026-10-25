@@ -1,9 +1,19 @@
-# naiwa-pet · 奶小蛙 macOS 升级版
+# naiwa-pet · 奶小蛙桌面宠物（macOS / Windows 升级版）
 
-> 基于原作者 [jiasjdia/naiwa](https://github.com/jiasjdia/naiwa) 的 Windows 桌宠源码，移植到 Apple Silicon macOS 原生运行，**并在原版基础上新增了形态、素材、语音和动作**。不需要 Wine，也不需要虚拟机。是我身为奶家人对奶娃及其衍生异形形象的喜爱让我改进了以下这个好玩的小软件，方便的话，顺手给个star呗【笑】
+> 基于原作者 [jiasjdia/naiwa](https://github.com/jiasjdia/naiwa) 的 Windows 桌宠源码，移植到 Apple Silicon macOS 原生运行，并补上了 Windows 构建，**在原版基础上新增了形态、素材、语音和动作**。macOS 版不需要 Wine，也不需要虚拟机。是我身为奶家人对奶娃及其衍生异形形象的喜爱让我改进了以下这个好玩的小软件，方便的话，顺手给个star呗【笑】
 ![六种形态](docs/forms.png)
 
 从左到右：奶蛙（原版）、奶蛋、奶狗、奶杯、奶豆、奶鼠。右键菜单里可以随时切换，也可以让六种形态一起出来。
+
+## 下载
+
+| 平台 | 文件 | 说明 |
+| --- | --- | --- |
+| macOS（Apple 芯片） | `naiwa-pet-1.3.0-macOS.zip` | 解压后把 App 拖进「应用程序」，首次右键打开 |
+| Windows 10 / 11（64 位） | `naiwa-pet-1.3.0-Windows.zip` | 单文件 exe，双击运行，不需要装 Python |
+| Windows（免 exe） | `naiwa-pet-1.3.0-Windows-source.zip` | 需要先装 Python 3.12；适合打不开 exe 的电脑 |
+
+下载页：https://github.com/kskbl1716/naiwa-pet/releases/latest
 
 ## 这是升级版，不是单纯移植
 
@@ -50,11 +60,28 @@
 
 > 原版的 Windows 专用实现保留为 `pet_runtime_win32.py`，方便对照。
 
+### 6. Windows 版
+
+Windows 版保留原版的 tkinter 透明色窗口、kernel32 单实例和全局快捷键，同时复用同一套六形态素材、高清帧和原片语音。源码入口是 `run_win.py`，发布包是单文件 exe。
+
+Windows 11 的「智能应用控制」会拦下没有代码签名的 exe。遇到拦截有两个办法：
+
+1. 用免 exe 的源码运行包，里面已经带好依赖，只要装一次 Python 3.12，双击「启动.bat」就能跑，不用改系统安全设置。
+2. 在「设置 → 隐私和安全性 → Windows 安全中心 → 应用和浏览器控制 → 智能应用控制」里关闭。注意：关闭后要重装 Windows 才能再开启。
+
 ## 系统要求
+
+macOS：
 
 - Apple Silicon Mac（M1/M2/M3/M4/M5）
 - macOS 13 及以上
-- Python 3.12
+- Python 3.12（仅从源码运行或源码包需要）
+
+Windows：
+
+- Windows 10 / 11，64 位
+- 单文件 exe 不需要 Python
+- 源码运行包需要 Python 3.12
 
 ## 从源码运行
 
@@ -71,6 +98,18 @@ python run_mac.py
 ```
 
 第一次启动会在屏幕右下角出现一只奶蛙。同一时间只允许一个实例，重复启动会唤醒已经在跑的那只。
+
+Windows 源码运行：
+
+```bat
+git clone https://github.com/kskbl1716/naiwa-pet.git
+cd naiwa-pet
+
+py -3.12 -m venv .venv
+.venv\Scripts\activate
+pip install -r requirements.txt
+python run_win.py
+```
 
 ## 操作
 
@@ -109,6 +148,9 @@ python run_mac.py
 | `run_mac.py`（新增） | 启动器：把 tkinter 替换成 `mac_tk`，并替换工作区换算、初始位置、说明窗口等平台相关函数 |
 | `pet_runtime.py`（重写） | 原版用 kernel32 命名互斥量和 RegisterHotKey；macOS 版改成 UNIX socket + Carbon 热键 |
 | `pet_runtime_win32.py`（保留） | 原 Windows 实现，供对照 |
+| `run_win.py`（新增） | Windows 入口：让 `pet_app` 使用 `pet_runtime_win32` |
+| `tools/build_windows.py`（新增） | Windows 单文件 exe 的打包脚本 |
+| `.github/workflows/windows-build.yml`（新增） | GitHub Actions 自动构建 Windows 包 |
 | `assets/forms/`（新增） | 六形态素材、各自的 manifest 与动作片段 |
 
 其余动画、物理、音频、分裂业务逻辑沿用上游源码。
@@ -124,8 +166,10 @@ python run_mac.py
 
 ## 已知限制
 
-- 只支持 Apple Silicon，Intel Mac 未测试
+- macOS 只支持 Apple Silicon，Intel Mac 未测试
 - 打包出的 `.app` 没有做公证，第一次打开要右键或双指按触控板 →「打开」
+- Windows exe 没有代码签名，Windows 11 的智能应用控制会拦截，可以改用源码运行包
+- Windows 版没有安装器，删掉 exe 就算卸载，数据在 `%LOCALAPPDATA%\naiwa`
 - 奶豆、奶鼠没有原片大笑镜头：奶鼠用奶蛋笑脸移植，奶豆保留原表情，触发大笑时改用真实动作代替
 - 语音是按形态变调合成的，不是每个形态的独立原声
 
@@ -138,9 +182,11 @@ pet_physics.py        # 物理：下落、反弹、堆积
 pet_audio.py          # 音频播放
 pet_eyes.py           # 眼神跟随
 pet_runtime.py        # macOS 单实例与全局热键
-pet_runtime_win32.py  # 原 Windows 实现（对照用）
+pet_runtime_win32.py  # Windows 实现（对照用）
+run_win.py            # Windows 启动器
 mac_tk.py             # AppKit 版 tkinter 子集
 run_mac.py            # macOS 启动器
+.github/              # Windows 自动构建工作流
 assets/               # 动画帧、眼部图层、六形态素材、语音
 media/                # 音频文件（大笑、群笑混音）
 tools/                # 测试与打包脚本
@@ -156,4 +202,4 @@ docs/                 # 预览图
 
 ## 致谢
 
-感谢原作者的奶小蛙，以及所有在 B 站分享奶家人视频的创作者。这个 macOS 升级版只是把喜欢的桌宠搬到了 Mac 上，并给它多加了几套衣服和表情。最后有什么问题欢迎大家到这里告诉我
+感谢原作者的奶小蛙，以及所有在 B 站分享奶家人视频的创作者。这个升级版只是把喜欢的桌宠搬到了 Mac 和 Windows 上，并给它多加了几套衣服和表情。最后有什么问题欢迎大家到这里告诉我
